@@ -1,12 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To Do List</title>
-  <script src="main.js"></script>
-</head>
-<body>
-  <div id="content"></div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous" />
+  </head>
+
+  <body>
+
+    <main id="main_container">
+      <nav class="nav bg-primary">
+        <a class="branding" href="#">
+          <img src="./images/note.png" alt="" height="30" class="d-inline-block align-top me-2">
+          To Do
+        </a>
+    
+        <div class="signed_in d-flex">
+          <span class="user_info d-flex align-items-center me-3">email@example.com</span>
+          <button id="sign_out_button" class="btn btn-outline-light rounded-pill">Sign Out</button>
+        </div>
+      </nav>
+
+
+      <div class="sidebar category_title">
+        <div class="sidebar_tabs">
+          <div class="home_tab">Home</div>
+          <div class="today_tab">Today</div>
+          <div class="week_tab">Week</div>
+          <div class="projects_tab">
+            <div class="projects_header">Projects</div>
+            <div class="projects_list project_title">
+              <div id="Work">
+                <div class="project_task_count">1</div>
+                <div class="project_name">Work</div>
+              </div>
+              <div id="Studies">
+                <div class="project_task_count">3</div>
+                <div class="project_name">Studies</div>
+              </div>
+              <div id="Chores">
+                <div class="project_task_count">5</div>
+                <div class="project_name">Chores</div>
+              </div>
+              <div id="Shopping">
+                <div class="project_task_count">1</div>
+                <div class="project_name">Shopping</div>
+              </div>
+              <div id="Uncategorized">
+                <div class="project_task_count">4</div>
+                <div class="project_name">Uncategorized</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="task_list_display">
+        <div class="task_list_heading d-flex justify-content-between align-items-center px-3">
+          <div class="category_title">Home</div>
+          <div class="date_title_container d-flex align-items-center">
+            <div class="due_date_title date_title pe-2">Due Date</div> <!-- due date after: descending/ascending icon -->
+            <i class="fas fa-angle-double-up pe-5"></i>
+          </div>
+        </div>
+
+        <div class="tasks_container">
+          <div id="0" class="user_task unchecked">
+            <div class="left_items">
+              <i class="far fa-square"></i>
+              <div class="user_task_title">Start Project</div>
+            </div>
+            <div class="right_items">
+              <div class="user_task_due_date">10/20/22</div>
+              <i class="far fa-edit"></i>
+              <i class="far fa-trash-alt"></i>
+            </div>
+          </div>
+          
+          <div id="1" class="user_task unchecked">
+            <div class="left_items">
+              <i class="far fa-check-square"></i>
+              <div class="user_task_title">Sit Around</div>
+            </div>
+            <div class="right_items">
+              <div class="user_task_due_date">10/25/22</div>
+              <i class="far fa-edit"></i>
+              <i class="far fa-trash-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- add new tasks, require title, maybe date -->
+
+    </main>
+
+
+
+    <script src="main.js"></script>
+  </body>
 </html>
