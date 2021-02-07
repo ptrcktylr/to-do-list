@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "bootstrap": "^5.0.0-beta1",
-    "date-fns": "^2.17.0",
-    "flatpickr": "^4.6.9"
+    "date-fns": "^2.17.0"
   }
 }
