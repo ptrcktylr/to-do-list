@@ -1,5 +1,6 @@
 import bootstrap from 'bootstrap';
 
-import { hideTaskForm } from "./ui";
+import { hideTaskForm, updateHomeTasks, addTaskListeners } from "./ui";
 
 hideTaskForm();
+updateHomeTasks();

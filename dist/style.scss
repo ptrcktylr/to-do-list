@@ -26,10 +26,9 @@ main#main_container {
   display: grid;
   height: 100vh;
   grid-template-rows: 50px auto;
-  grid-template-columns: 270px auto;
   grid-template-areas:
   "nav nav"
-  "sidebar task_list_display";
+  "task_list_display task_list_display";
 }
 
 .nav {
@@ -75,7 +74,7 @@ span.user_info {
 
 .projects_list {
   height: 200px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .projects_list > * {
@@ -169,16 +168,67 @@ span.user_info {
   margin-left: 15px;
 }
 
+.editing {
+  display: none;
+}
+
 .add_task_container {
   height: 40px;
 }
 
-#new_task_button {
+#new_task_button, #ascending_button, #descending_button, [class^="user_task_title"] {
   cursor: pointer;
+}
+
+.completed [class^="user_task_title"], .completed [class^="user_task_due_date"] {
+  text-decoration: line-through;
+  color: #777777;
 }
 
 @media (max-width: 1100px) {
   .task_list_display {
     width: 500px;
   }
+}
+
+#centerer {
+  position: fixed;
+  top: 30%;
+  right: 0;
+  height: auto;
+  z-index: 10;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  opacity: .7;
+  z-index: 9;
+}
+
+#taskPopupContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  padding: 0 0 10px 20px;
+  border-radius: 5px;
+  border: #0E6EFD solid 2px;
+  background-color: white;
+}
+
+#titleContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#taskPopupTitle {
+  font-size: 2rem;
+  padding-top: 5px;
 }
