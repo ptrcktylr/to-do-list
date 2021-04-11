@@ -4,7 +4,7 @@ A small to do list application made to practice Javascript. Lists stored using l
 
 [Try it out!](https://ptrcktylr.github.io/to-do-list/)
 
-![preview](/images/preview.png)
+![preview](/dist/images/preview.png)
 
 ## Features
 - Users can create tasks to add to the their list.
